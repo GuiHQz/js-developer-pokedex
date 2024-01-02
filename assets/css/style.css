@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    background-color: aliceblue;
+  }
+  
+  .top-logo {
+    display: flex;
+    justify-content: center;
+    padding: 2.5rem 0;
+  }
+  
+  .page {
+    min-height: 100vh;
+    background-color: aqua;
+    padding: 0 1rem;
+  }
+  
+  .pokemons {
+    margin: 0.5rem;
+    gap: 1rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: 5rem;
+  }
+  
+  .pokemon {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    height: 6.5rem;
+    padding: 0.5rem;
+    min-width: 9rem;
+    cursor: pointer;
+  }
+  
+  .pokemon span {
+    color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 0.2rem;
+  }
+  
+  .pokemon .name {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.2rem;
+  }
+  
+  .pokemon img {
+    height: 70px;
+  }
+  
+  .data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .data li {
+    font-size: small;
+    padding: 0.15rem;
+    border-radius: 0.5rem;
+    height: 1.25rem;
+  }
+  
+  .types li {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0.75rem;
+    filter: brightness(1.2);
+  }
+  
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .pagination button {
+    border: none;
+    margin: 0.25rem 0;
+    border-radius: 1rem;
+    font-size: 0.725rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    background-color: #6c79db;
+  }
+  
+  .pagination button:hover {
+    cursor: pointer;
+    background-color: #344cff;
+  }
+  
+  @media screen and (min-width: 480px) {
+    /* verificar depois os ""grid-template-columns"" de cada media query */
+    .pokemons {
+      grid-template-columns: auto auto auto;
+    }
+    .pokemon {
+      max-width: 20rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    /* verificar depois os ""grid-template-columns"" de cada media query */
+    .page {
+      width: 768px;
+      margin: 0 auto;
+    }
+  
+    .pokemon {
+      min-height: 7rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    /* verificar depois os ""grid-template-columns"" de cada media query */
+    .page {
+      width: 1024px;
+      margin: 0 auto;
+    }
+  
+    .pokemons {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  
+    .pokemon {
+      min-height: 7rem;
+    }
+  }
+  
